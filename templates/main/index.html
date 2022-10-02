@@ -1,0 +1,34 @@
+{% extends 'main/base.html' %}
+{% block content %}
+
+<style>
+    .card {
+        width: 250px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        margin: 1rem;
+    }
+</style>
+<div class="container text-center" style="margin-top: 8rem">
+    <h1>Recent articles...</h1><br/>
+    <div class="row">
+    {% for article in latest_articles %}
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://fonts.gstatic.com/s/img/knowledge/glossary/terms/placeholder_text/images/thumbnail_439626857.svg" alt="Card image cap">
+            <div class="card-body">
+                <a href="/articles/{{ article.id }}" style="text-decoration:none">
+                    <h5 class="card-title">{{ article.title }}</h5>
+                </a>
+                
+                <p class="text-muted"> - {{ article.createdAt }}</p>
+                <!-- <p class="card-text">{{ article.content }}...</p> -->
+            </div>
+        </div>
+   
+
+    {% endfor %}
+</div>
+
+
+</div>
+{% endblock %}

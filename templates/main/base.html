@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Blog Application</title>
+    <style>
+        body {
+            background-image: url("https://wallpapercave.com/wp/wp6751611.jpg");
+            background-size: cover;
+        }
+        nav {
+            background: #333;
+            height: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top px-2 mb-5">
+        <a class="navbar-brand text-white" href="/">MyBlogger</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <a class="nav-link text-white" href="/articles/new">Create Article</a>
+
+           
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>
